@@ -29,3 +29,16 @@ body > ul >  ul:nth-child(2) > li:nth-child(9) {
     color : green;
     background-color: white;
 }
+
+/*마지막 : 비야부터 소영이까지 속성을 아래 조건에 맞게 변경하라
+    1. 색상 : 핫핑크
+    2. 배경색 : 검정*/
+
+    body > ul > ul:nth-child(2) > li:nth-child(-n+5) {
+        color : hotpink;
+        background-color: black;
+    }
+
+/* tag < class < id < !important */
+/* > 첫째 자매 선택, ~ 모든 자매 선택, (띄어쓰기) 자손 선택*/
+/* nth-child(n) n번째 자식 */
