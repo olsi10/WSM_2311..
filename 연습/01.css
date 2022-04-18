@@ -19,3 +19,13 @@ body {
 #secondgrade {
     text-decoration: underline;
 }
+
+/* 해보기 : 나(윤영)의 속성을 아래 조건에 맞게 변경하라
+    1. 색상 : 초록색
+    2. 배경색 : 흰색
+*/
+
+body > ul >  ul:nth-child(2) > li:nth-child(9) {
+    color : green;
+    background-color: white;
+}
