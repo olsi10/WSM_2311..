@@ -1,0 +1,9 @@
+/*미션 : 해주 최씨들을 아래 조건에 맞게 속성 변경
+    1. 배경 : 초록
+    2. 글색 : 흰색*/
+
+
+    body > ul > li:nth-child(n+2) {
+        color: white;
+        background-color: green;
+    }
