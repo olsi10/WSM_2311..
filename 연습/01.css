@@ -1,0 +1,21 @@
+/*
+우선 순위 : 포괄 < 구체
+우선 순위 : class < id
+같은 선택자일 때에는 아래 있는 것이 우선
+*/
+
+body {
+    background-color: aqua;
+}
+
+.leader {
+    color: white;
+}
+
+.leader2 {
+    color: white;
+}
+
+#secondgrade {
+    text-decoration: underline;
+}
