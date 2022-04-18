@@ -1,0 +1,18 @@
+/*
+우선 순위 : 포괄 < 구체
+우선 순위 : class < id
+같은 선택자일 때에는 아래 있는 것이 우선
+*/
+
+body {
+    color: gray;
+  }
+#leader {
+    color: gold;
+  }
+ body li,
+ h6 {
+    /* > : 자식, 띄어쓰기 : 자손*/
+    color: rgb(94, 181, 181);
+  }
+  
