@@ -6,11 +6,16 @@
                 height : 200px;
                 display : flex;
                 flex-direction: row;
+                /*flex-direction: column;
+                  row일 때는 가로, column은 세로*/
             }
             .item {
                 background-color: tomato;
                 color: white;
                 border : 1px solid white;
+            }
+            .item:nth-child(2) {
+                flex-basis : 200px;
             }
         </style>
     </head>
@@ -24,5 +29,7 @@
     </div>
 
 </body>
+<!--flex의 어떤 방향에 해당되는 elements의 크기를 정해주는 것-->
+
 
 </html>
