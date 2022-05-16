@@ -20,7 +20,7 @@
             } */
 
             /*flex-grow*/
-            .container {
+            /*.container {
             background-color: powderblue;
                 height : 200px;
                 display : flex;
@@ -31,16 +31,44 @@
                 color: white;
                 border : 1px solid white;
                 flex-grow: 1;
-                /*0(비활) 1(활)*/
+                /*0(비활) 1(활)
             }
             .item:nth-child(2) {
-                /*flex-basis : 200px;*/
+                /*flex-basis : 200px;
                 flex-grow : 2;
                 /*grow는 사이좋게 n분의 1 하지만
                 요소에 grow- : n 정해주면
-                정해준만큼 n배의 값을 가지게 됨*/
-            }
+                정해준만큼 n배의 값을 가지게 됨
+            }*/
 
+            /*flex-shrink*/
+            .container {
+            background-color: powderblue;
+                height : 200px;
+                display : flex;
+                flex-direction: row
+            }
+            .item {
+                background-color: tomato;
+                color: white;
+                border : 1px solid white;
+                
+            }
+            .item:nth-child(2) {
+                /*flex-basis : 300px;
+                오른쪽 여백들이 모두 줄어들어서
+                줄어들 곳이 없는 상황인데도 계속 줄을 때
+                item의 2번째 자식의 여백이 줄어듦*/
+                flex-shrink: 0;
+                /*flex-grow의 반대 기능인 flex-shrink
+                shrink = 줄이다.
+                shrink가 0일 때는 여백이 줄어들 곳이 없을 때
+                item의 2번째 자식의 여백은 줄어들지 않음
+                (페이지에서 아무 반응없이 줄어듦)
+                shrink가 1일 때는 여백이 줄어듦
+                item의 2번째 자식의 여백이 줄어듦
+                (페이지에서 반응형 웹처럼 줄어듦)*/
+            }
 
         </style>
     </head>
