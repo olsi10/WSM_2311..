@@ -1,0 +1,32 @@
+:root {
+    --red : crimson;
+    --yellow : gold;
+    --green : lightgreen;
+    --blue : skyblue;
+    --font-color : green;
+}
+/*css 변수*/
+
+* {
+    box-sizing: border-box;
+    /*외곽선에 준 크기가 박스 크기*/
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+header {
+    --border-width : 5px;
+}
+
+.nav-list {
+    border: var(--border-width) solid var(--font-color);
+}
+.nav-list li {
+    border: var(--border-width) solid var(--yellow);
+}
