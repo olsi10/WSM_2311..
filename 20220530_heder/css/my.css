@@ -1,0 +1,26 @@
+.nav-list {
+    justify-content : flex-end;
+    /* flex-wrap: wrap; */
+}
+.nav-list {
+    /*시험 문제1!!!!!!!!!*/
+    flex-basis: 200px; /*기본 크기 설정 기본값 : auto*/
+    flex-shrink: 0; /*줄이기 가능 1, 기본값 : 1*/
+    flex-grow: 1; /*늘리기 1, 기본값 : 0*/
+    flex: 1 0 200px; /*flex-grow flex shrink flex-basis*/
+    /* border : 픽셀 solid 색깔
+    border-width : 픽섹
+    border-style : 색깔 */
+}
+.nav-list li:nth-child(1) {
+    flex-grow: 4;
+}
+.nav-list li:nth-child(2) {
+    flex-grow: 1;
+}
+.nav-list li:nth-child(3) {
+    flex-grow: 1;
+}
+.nav-list li:nth-child(4) {
+    flex-grow: 1;
+}
