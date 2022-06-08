@@ -2,6 +2,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
 /* Variable CSS */
+:root {
+    /* color */
+    --first-color : hsl(160, 100%, 25%);
+    --first-color-bright : hsl(160, 100%, 40%);
+    --second-color: hsl(339, 77%, 59%);
+    --third-color:hsl(42, 87%, 52%);
+    --third-color :hsl(160, 0%, 0%);
+    --text-color:hsl(160,0%, 47%);
+    --body-color : #fff;
+    --container-color : #fff;
+
+    /* fotns */
+    --body-font : 'Noto Sans KR', sans-serif;
+    --biggest-font-size:2.25rem; /*기본 값에 2.25배!!! = 36px 기본값 : 16px*/
+    --h1-font-size : 2rem;
+    --h2-font-size : 1.5rem;
+    --h3-font-size : 1.25rem;
+    --normar-font-size : 1rem;
+    --small-font-size : 0.8rem;
+    --smaller-font-size : 0.75rem;
+    
+    /* fint weight */
+    --font-medium : 500;
+    --font-bold : 700;
+
+    /* z-index */
+    --z-index :  100;
+
+}
 
 /* BASE */
 body {
