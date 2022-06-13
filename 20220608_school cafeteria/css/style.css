@@ -108,3 +108,31 @@ nav i { /*밥 흰색*/
 /*2K & 4K*/
 
 /* mobile */
+@media screen and (max-width : 600px) { /*시험문제*/
+    .nav-toggle {
+        display: block; /*보이게*/
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .nav-logo {
+        margin : 0 auto; /*위 아래 : 0, 좌, 우 : auto 똑같은 여백 즉, 가운데 정렬*/
+        cursor:
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        position: absolute; /*절댓값 (왼)0, (오)0*/
+        background-color: #2f2f2f;   
+        left: 0;
+        right: 0; /* width: 100%; */
+        top: 44px; /*44px은 아이콘을 누를 때 이 크기가 적당하다고 함*/
+    }
+    .nav-item {
+        padding : .5rem 0; /*위 아래 여백, 좌, 우 여백 0*/
+        border-bottom: 1px solid #fff; /*아래줄 밑줄*/
+    }
+
+
+}
