@@ -82,6 +82,12 @@ nav {
     align-items: center;
 }
 
+.nav-toggle {
+    display: none;
+    color: #fff;
+    /* visibility: hidden; /*공간을 차지함*/
+}
+
 .nav-list {
     display: flex;
     column-gap: 0.75rem; /*12px; */
