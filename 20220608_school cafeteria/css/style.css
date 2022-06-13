@@ -96,12 +96,16 @@ nav {
 
 nav i { /*밥 흰색*/
     color: #fff;
+    font-size: 1.25rem; /*아이콘 1.25배*/
 }
 
-.nav-item a{
+.nav-item a {
     color: #fff;
 }
 
+.nav-link {
+    display: block; /* 한 줄 전체를 차지해서 링크 동작*/ㄴ
+}
 
 
 /* breakpoints */
@@ -117,7 +121,6 @@ nav i { /*밥 흰색*/
 
     .nav-logo {
         margin : 0 auto; /*위 아래 : 0, 좌, 우 : auto 똑같은 여백 즉, 가운데 정렬*/
-        cursor:
     }
 
     .nav-list {
@@ -132,6 +135,7 @@ nav i { /*밥 흰색*/
     .nav-item {
         padding : .5rem 0; /*위 아래 여백, 좌, 우 여백 0*/
         border-bottom: 1px solid #fff; /*아래줄 밑줄*/
+        text-align: center;
     }
 
 
