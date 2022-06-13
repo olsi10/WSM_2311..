@@ -57,6 +57,7 @@ ul {
 }
 a {
     text-decoration: none;
+    color: var(--title-color);
 }
 img {
     /*display: block; 줄바꿈이 되도록!! 옆에 아무도 없게 / div가 갖게 되는 기본값 , 가로 한 줄 다 차지*/
@@ -64,11 +65,38 @@ img {
     height: auto;
 }
 
+header {
+    background-color: var(--first-color);
+}
+
 /* nav */
 .nav-container {
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
+nav {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 0.75rem; /*12px; */
+
+}
+
+nav i { /*밥 흰색*/
+    color: #fff;
+}
+
+.nav-item a{
+    color: #fff;
+}
+
+
 
 /* breakpoints */
 /*2K & 4K*/
