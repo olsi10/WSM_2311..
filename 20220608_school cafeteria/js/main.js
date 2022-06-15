@@ -1,6 +1,6 @@
 //show / hide menu <-> 토글 메뉴(껐다 켰다 반복)
 
-const toggleMenu = function (toggleID, navListId) {
+const toggleMenu = (toggleID, navListId) => {
     //html -> js
     const toggle = document.getElementById(toggleID);
     const navList = document.getElementById(navListId);
