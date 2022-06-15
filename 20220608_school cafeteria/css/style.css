@@ -133,6 +133,7 @@ nav i { /*밥 흰색*/
         background-color: #2f2f2f;   
         height : 0; /*overflow : hidden 함께 메뉴 안 보이게 하자*/
         overflow: hidden;
+        transition: 0.1s;
     }
     .nav-item {
         padding : .5rem 0; /*위 아래 여백, 좌, 우 여백 0*/
