@@ -104,7 +104,7 @@ nav i { /*밥 흰색*/
 }
 
 .nav-link {
-    display: block; /* 한 줄 전체를 차지해서 링크 동작*/ㄴ
+    display: block; /* 한 줄 전체를 차지해서 링크 동작*/
 }
 
 
@@ -125,17 +125,23 @@ nav i { /*밥 흰색*/
 
     .nav-list {
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
         position: absolute; /*절댓값 (왼)0, (오)0*/
-        background-color: #2f2f2f;   
         left: 0;
         right: 0; /* width: 100%; */
-        top: 44px; /*44px은 아이콘을 누를 때 이 크기가 적당하다고 함*/
+        top: 44px;                          /*44px은 아이콘을 누를 때 이 크기가 적당하다고 함*/
+        background-color: #2f2f2f;   
+        height : 0; /*overflow : hidden 함께 메뉴 안 보이게 하자*/
+        overflow: hidden;
     }
     .nav-item {
         padding : .5rem 0; /*위 아래 여백, 좌, 우 여백 0*/
         border-bottom: 1px solid #fff; /*아래줄 밑줄*/
         text-align: center;
+    }
+    
+    .show-menu {
+        height: 164px;
     }
 
 
