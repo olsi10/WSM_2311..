@@ -6,11 +6,6 @@ const toggleMenu = (toggleID, navListId) => {
     const navList = document.getElementById(navListId);
     const toggleIcon = toggle.getElementsByTagName("i")[0];
 
-    const clickHandler = () => {
-        //밖에서 호출할 수 없는 함수 
-        navList.classList.toggle('show-menu')
-    }
-
     if (toggle && navList) {
         //toggle click
         toggle.addEventListener('click', () => {
