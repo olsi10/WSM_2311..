@@ -4,7 +4,7 @@ const toggleMenu = (toggleID, navListId) => {
     //html -> js
     const toggle = document.getElementById(toggleID);
     const navList = document.getElementById(navListId);
-    console.log(toggle, navList);
+    const toggleIcon = toggle.getElementsByTagName("i")[0];
 
     const clickHandler = () => {
         //밖에서 호출할 수 없는 함수 
@@ -16,14 +16,13 @@ const toggleMenu = (toggleID, navListId) => {
         toggle.addEventListener('click', () => {
             //show/hide menu : .show-menu
             navList.classList.toggle('show-menu');
-        });
-        
-        
-    
+
+            //change toggle icon : bx-menu <-> bx-x
+            toggleIcon.classList.toggle("bx-menu");
+            toggleIcon.classList.toggle("bxs-x-square");
+
+        });    
     }
-
-
-
 }
 
 toggleMenu('nav-toggle', 'nav-list');
