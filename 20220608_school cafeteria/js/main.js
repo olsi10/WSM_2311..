@@ -1,12 +1,12 @@
 //show / hide menu <-> 토글 메뉴(껐다 켰다 반복)
 
-function toggleMenu (toggleID, navListId) {
+const toggleMenu = function (toggleID, navListId) {
     //html -> js
     const toggle = document.getElementById(toggleID);
     const navList = document.getElementById(navListId);
     console.log(toggle, navList);
 
-    function clickHandler() {
+    const clickHandler = function() {
         //밖에서 호출할 수 없는 함수 
         navList.classList.toggle('show-menu');
     }
