@@ -1,6 +1,4 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-
 /* Variable CSS */
 :root {
     /* color */
@@ -34,6 +32,7 @@
 
 /* BASE */
 * {
+    font-family: 'Noto Sans KR', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -107,6 +106,53 @@ nav i { /*밥 흰색*/
     display: block; /* 한 줄 전체를 차지해서 링크 동작*/
 }
 
+/* home */
+
+main {
+    display: flex;
+    justify-content: center;
+    column-gap: 60px;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    margin : 44px 2rem;
+}
+
+.card-image {
+    height: 160px;
+    padding-bottom: 66.6666666667%; /* 그림 비율 유지하며 확대/축소 : 160/240 */
+    background : url("../img/plate_edit.png") center center;
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-description {
+    margin: 1rem;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.card-menu {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+article:nth-child(2) > div > h3 > div.card-time {
+    color: var(--first-color);
+}
+
+.card {
+    background-color: #f3f3f3;
+    border-radius: 1rem;
+    /* flex-basis: 240px;
+    /* flex-grow: 1;
+    flex-shrink: 0; */
+    flex: 1 0 240px; /*기본 240px이고 커지면 확장*/
+    max-width: 300px; /* 너무 넓지 않게 max 정함*/
+}
 
 /* breakpoints */
 /*2K & 4K*/
