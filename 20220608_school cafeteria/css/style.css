@@ -108,6 +108,10 @@ nav i { /*밥 흰색*/
 
 /* home */
 
+h3{
+    font-size: var(--h3-font-size);
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -115,6 +119,24 @@ main {
     flex-wrap: wrap;
     row-gap: 40px;
     margin : 44px 2rem;
+}
+
+.card {
+    background-color: #f3f3f3;
+    border-radius: 1rem;
+    /* flex-basis: 240px;
+    /* flex-grow: 1;
+    flex-shrink: 0; */
+    flex: 1 0 240px; /*기본 240px이고 커지면 확장*/
+    max-width: 300px; /* 너무 넓지 않게 max 정함*/
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover .card-time {
+    color: var(--third-color);
 }
 
 .card-image {
@@ -140,19 +162,6 @@ main {
     margin-top: 1rem;
 }
 
-article:nth-child(2) > div > h3 > div.card-time {
-    color: var(--first-color);
-}
-
-.card {
-    background-color: #f3f3f3;
-    border-radius: 1rem;
-    /* flex-basis: 240px;
-    /* flex-grow: 1;
-    flex-shrink: 0; */
-    flex: 1 0 240px; /*기본 240px이고 커지면 확장*/
-    max-width: 300px; /* 너무 넓지 않게 max 정함*/
-}
 
 /* breakpoints */
 /*2K & 4K*/
