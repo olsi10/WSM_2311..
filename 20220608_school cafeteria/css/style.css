@@ -130,11 +130,12 @@ main {
     flex: 1 0 240px; /*기본 240px이고 커지면 확장*/
     max-width: 300px; /* 너무 넓지 않게 max 정함*/
 }
-
+.now, /* hover 가 아니어도 now 라는 클래스가 있으면 box shadow 지정*/
 .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.now .card-time,
 .card:hover .card-time {
     color: var(--third-color);
 }
