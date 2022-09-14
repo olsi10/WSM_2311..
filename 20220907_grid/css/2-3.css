@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gamja+Flower&display=swap');
+
+/* font-family: 'Black Han Sans', sans-serif; */
+/* font-family: 'Gamja Flower', cursive; */
+
+
+h1 {
+    text-align: center;
+    max-width: 600px;
+    font-family: 'Black Han Sans', sans-serif;
+    color: chocolate;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50px repeat(5, 1fr);
+    max-width: 600px;
+    height: 400px;
+    color: coral;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid chocolate;
+    font-family: 'Gamja Flower', cursive;
+}
