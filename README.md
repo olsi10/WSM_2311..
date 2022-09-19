@@ -1,7 +1,14 @@
 # website
 웹 사이트 제작 실습 + 급식실 웹페이지 🍴
 
+## HelloWrold
+![image](https://user-images.githubusercontent.com/87300199/190942815-aaa281a2-c2d5-4c97-9cef-cb1c2da1cfaa.png)
 
-![image](https://user-images.githubusercontent.com/87300199/190052058-85fd5b6f-99ff-40b9-872a-71767c4310ea.png)
+## header
+![image](https://user-images.githubusercontent.com/87300199/190942995-c096f3aa-cd81-4b5b-9a1e-875a4677ca2b.png)
 
-![image](https://user-images.githubusercontent.com/87300199/190052076-0d8e7f2c-dd68-4cd4-ae09-4d8fb792c0c3.png)
+## school cafeteria
+![image](https://user-images.githubusercontent.com/87300199/190943079-2ae1ef73-631b-4a85-9c6d-70d6f80f0f1a.png)
+
+## grid
+![image](https://user-images.githubusercontent.com/87300199/190943122-eb998a10-f5ab-4245-90df-6781c9100125.png)
