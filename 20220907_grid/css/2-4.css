@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'HANBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/HANBatang.woff') format('woff');
+}
+
+* {
+    font-family: 'HANBatang';
+}
+
+h1 {
+    text-align: center;
+    max-width: 800px;
+    font-family: 'HANBatang';
+    color: chocolate;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 120px repeat(5, 1fr);
+    grid-template-rows: 50px repeat(7, 80px);
+    max-width: 800px;
+    height: 400px;
+    color: rgb(0, 0, 0);
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.days-of-week{
+    color: rgb(0, 0, 0);
+    background-color: #C2D6EE;
+}
+
+.days-of-week:nth-child(1) {
+    background-color: white;
+}
+
+.period {
+    color: black;
+}
+
+.grid-item:nth-child(9) {
+    grid-row: 2 / 4;
+    grid-column: 3 / 4;
+}
+
+.grid-item:nth-child(11) {
+    grid-row: 2 / 4;
+    grid-column: 5 / 6;
+}
+
+.grid-item:nth-child(18) {
+    grid-row: 4 / 6;
+    grid-column: 2 / 3;
+}
+
+.grid-item:nth-child(20) {
+    grid-row: 4 / 6;
+    grid-column: 4 / 5;
+}
+
+.grid-item:nth-child(31) {
+    grid-row: 6 / 8;
+    grid-column: 5 / 6;
+}
+
+.grid-item:nth-child(32) {
+    grid-row: 6 / 8;
+    grid-column: 6 / 7;
+}
+
+.grid-item:nth-child(38) {
+    background-color: rgb(216, 176, 0);
+}
+
+.grid-item:nth-child(35) {
+    grid-row: 7 / 9;
+    grid-column: 3 / 4;
+}
+
+.grid-item:nth-child(36) {
+    grid-row: 7 / 9;
+    grid-column: 4 / 5;
+}
+
+.grid-item:nth-child(40) {
+    background-color: rgb(216, 176, 0);
+}
