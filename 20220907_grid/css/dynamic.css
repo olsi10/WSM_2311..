@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 /* .grid-container {
     display: flex;
     justify-content: space-around;
 } */
+
+* {
+    font-family: 'Jua', sans-serif;
+}
 
 h1 {
     max-width: 800px;
@@ -16,7 +22,7 @@ h1 {
 }
 
 .grid-container,
-.date-grid-container {
+.data-grid-container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
