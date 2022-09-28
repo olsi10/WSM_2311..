@@ -9,7 +9,6 @@ let year = now.getFullYear();
 let month = now.getMonth(); // 0 ~ 11
 month++;
 
-
 const setCalendar = (year, month) => {
 
     // 1일은 무슨 요일?
@@ -34,6 +33,9 @@ const setCalendar = (year, month) => {
     // 아래 자식 요소 만들기 전에 부모 요소 가져오기 element's' 면 여러 개
     const dataGridContainerDiv = document.getElementsByClassName('data-grid-container')[0];
 
+    // 자식 초기화, 나중에 추가했을 때 여러 개 생기지 않도록
+    dataGridContainerDiv.innerHTML = "";
+
     // 1일부터 말일까지 grid-item 만들자
     for(let i = 1; i <= lastDate; i++) {
         // 요소 만들기
@@ -49,8 +51,6 @@ const setCalendar = (year, month) => {
         dataGridContainerDiv.appendChild(newDiv);
         
     }
-    
-    
     
     // 1일에 해당하는 div를 grid-column-start: 요일 + 1;
     let firstDateDiv = dataGridContainerDiv.getElementsByClassName('grid-item')[0];
