@@ -9,10 +9,38 @@
     font-family: 'Jua', sans-serif;
 }
 
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
-    max-width: 800px;
     text-align: center;
-    margin: 30px auto;
+    margin: 30px 50px;
+}
+
+#prev_btn,
+#next_btn {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 6px 10px;
+    color: white;
+    background-color: #c5c5c5;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+
+#prev_btn:hover {
+    color: black;
+    background-color: rgb(95, 201, 118);
+}
+
+#next_btn:hover {
+    color: black;
+    background-color: rgb(95, 201, 118);
 }
 
 #calendar {
@@ -40,4 +68,17 @@ h1 {
 
 .first {
     grid-column-start: 5;
+}
+
+.grid-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+.grid-item:hover {
+    font-size: 30px;
+    color: rgb(95, 201, 118);
+    border: double 1px #c5c5c5;
+    cursor: pointer;
 }
