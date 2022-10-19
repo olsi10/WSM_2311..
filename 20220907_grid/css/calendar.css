@@ -11,7 +11,7 @@ h1 {
 
 #calendar {
     max-width: 800px;
-    height: 600px;
+    /* height: 600px; */
     margin: 0 auto;
 }
 
