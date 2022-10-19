@@ -82,3 +82,20 @@ h1 {
     border: double 1px #c5c5c5;
     cursor: pointer;
 }
+
+.menu-grid-container {
+    display: grid;
+    row-gap: 20px;
+    /* 메뉴의 내용에 따라서 그리드 높이를 조정한다 */
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+
+
+}
+
+.breakfast,
+.lunch,
+.dinner {
+    width: 300px;
+    border-radius: 8px;
+    background-color: rgb(231, 231, 231);
+}
