@@ -106,6 +106,11 @@ initBtn();
 //  API AJAX 급식 데이터 가져오기
 
 
+// .data-grid-container > .grid-item (날짜): js mouseover 이벤트 발생하면 handler 지정
+// handler에서 year, month, date 정보 가져와서 url 생성
+// AJAX 사용해서 url 호출 (Asynchronous JavaScript ) = 필요 부분만 갱신되는 기능
+// 호출시 #breakfast, #lunch, #dinner에 메뉴 출력
+
 const KEY = "42a1d43c85f848fdaed1ad5a7b5325ab";
 const ATPT_OFCDC_SC_CODE = "B10";           // 서울특별시교육청
 const SD_SCHUL_CODE = "7010569";            // 미림여자정보과학고
