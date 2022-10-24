@@ -3,8 +3,9 @@
 
 ## 일정
 
-> 10.24 : 기획서 양식 업로드
-> 11.6 : 기획서 제출 마감
+> 10.24 : 기획서 양식 업로드<br/>
+> 11.6 : 기획서 제출 마감<br/>
+> 11.27 : 개발 마감
 
 ## HelloWrold
 ![image](https://user-images.githubusercontent.com/87300199/190942815-aaa281a2-c2d5-4c97-9cef-cb1c2da1cfaa.png)
