@@ -107,9 +107,55 @@ initBtn();
 
 
 // .data-grid-container > .grid-item (날짜): js mouseover 이벤트 발생하면 handler 지정
-// handler에서 year, month, date 정보 가져와서 url 생성
+const handler = (event) => {
+    // handler에서 year, month, date 정보 가져와서 url 생성
+    let date = event.target.innerHTML;
+    const KEY = "42a1d43c85f848fdaed1ad5a7b5325ab";
+    const ATPT_OFCDC_SC_CODE = "B10";           // 서울특별시교육청
+    const SD_SCHUL_CODE = "7010569";            // 미림여자정보과학고
+    let MLSV_YMD = `${year}${month.toString().padStart(2, "0")}${date.padStart(2, "0")}`;    // 2022 / 10 / 19
+    // 한자리의 경우 앞자리에 0을 넣어야 함 ex) 3일 -> 03
+    // let MMEAL_SC_CODE = 2;                   // 중식2 석식3 조식1
+
+    let url = `https://open.neis.go.kr/hub/mealServiceDietInfo`;
+
+    url += `?KEY=${KEY}`;
+    url += `&Type=json`;
+    url += `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`;
+    url += `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`;
+    url += `&MLSV_YMD=${MLSV_YMD}`;
+    // url += `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`;
+
+    console.log(url);
+
+    getMenuByAPI(url); //AJAX 호출
+
+}
 // AJAX 사용해서 url 호출 (Asynchronous JavaScript ) = 필요 부분만 갱신되는 기능
+const getMenuByAPI = (url) => {
+    // XMLHttpRequest 만들기
+    // 요청 방식,url 비동기 여부 설정
+
+    // 요청 전송
+
+    // callback
+}
+
+let dateGridContainerDiy = document.getElementsByClassName('data-grid-container')[0];
+let gridItems = dateGridContainerDiy.getElementsByClassName('grid-item');
+
+for(let gridItem of gridItems) {
+    gridItem.onclick = handler;
+}
+
+
+
+
+
+
 // 호출시 #breakfast, #lunch, #dinner에 메뉴 출력
+
+
 
 const KEY = "42a1d43c85f848fdaed1ad5a7b5325ab";
 const ATPT_OFCDC_SC_CODE = "B10";           // 서울특별시교육청
@@ -121,7 +167,6 @@ let url = `https://open.neis.go.kr/hub/mealServiceDietInfo`;
 
 url += `?KEY=${KEY}`;
 url += `&Type=json`;
- 
 url += `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`;
 url += `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`;
 url += `&MLSV_YMD=${MLSV_YMD}`;
