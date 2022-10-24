@@ -134,11 +134,24 @@ const handler = (event) => {
 // AJAX 사용해서 url 호출 (Asynchronous JavaScript ) = 필요 부분만 갱신되는 기능
 const getMenuByAPI = (url) => {
     // XMLHttpRequest 만들기
+    let xhr = new XMLHttpRequest();
+    
+    // callback
+    xhr.onreadystatechange = () => { // onclick고 ㅏㄱ타
+        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+            console.log(xhr.response);
+        }
+        else {
+            console.log("우");
+        }
+    }
+                                    
     // 요청 방식,url 비동기 여부 설정
+    xhr.open("GET", url, true); 
 
     // 요청 전송
+    xhr.send();
 
-    // callback
 }
 
 let dateGridContainerDiy = document.getElementsByClassName('data-grid-container')[0];
