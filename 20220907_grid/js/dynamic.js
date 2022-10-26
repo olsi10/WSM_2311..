@@ -107,6 +107,7 @@ initBtn();
 
 
 // .data-grid-container > .grid-item (날짜): js mouseover 이벤트 발생하면 handler 지정
+// event 파라미터 -> 값 가져오기
 const handler = (event) => {
     // handler에서 year, month, date 정보 가져와서 url 생성
     let date = event.target.innerHTML;
@@ -128,7 +129,7 @@ const handler = (event) => {
 
     console.log(url);
 
-    getMenuByAPI(url); //AJAX 호출
+    getMenuByAPI(url); //AJAX 호출 (비동기)
 
 }
 // AJAX 사용해서 url 호출 (Asynchronous JavaScript ) = 필요 부분만 갱신되는 기능
@@ -137,9 +138,10 @@ const getMenuByAPI = (url) => {
     let xhr = new XMLHttpRequest();
     
     // callback
-    xhr.onreadystatechange = () => { // onclick고 ㅏㄱ타
+    xhr.onreadystatechange = () => { // onclick
         if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-            console.log(xhr.response);
+            // console.log(xhr.response); // 데이터 출력
+            showMenu(xhr.response);
         }
         else {
             console.log("우");
@@ -152,6 +154,53 @@ const getMenuByAPI = (url) => {
     // 요청 전송
     xhr.send();
 
+}
+
+const showMenu = (jsonString) => {
+    console.log(jsonString); // 문자열 반환 
+    
+    // jsonString -> json
+    let json = JSON.parse(jsonString); // jsonString을 json으로 파싱, JSON.stringify()과 쌍
+    console.log(json);
+
+    let breakfastMenu;
+    let lunchMenu;
+    let dinnerMenu;
+
+    // json -> 조식, 중식, 석식
+    try {
+        breakfastMenu = json["mealServiceDietInfo"][1]["row"][0]["DDISH_NM"]; // 의 1번째를 가져온다.
+    }
+    catch {
+        breakfastMenu = "없음";
+
+    }
+
+    try {
+        lunchMenu = json["mealServiceDietInfo"][1]["row"][1]["DDISH_NM"]; // 의 2번째를 가져온다.
+    }
+    catch {
+        lunchMenu = "없음";
+
+    }
+
+    try {
+        dinnerMenu = json["mealServiceDietInfo"][1]["row"][0]["DDISH_NM"]; // 의 1번째를 가져온다.
+    }
+    catch {
+        dinnerMenu = "없음";
+
+    }
+
+
+    // console.log(breakfastMenu);
+    // console.log(lunchMenu);
+    // console.log(dinnerMenu);
+
+    // 조식, 중식, 석식 -> html
+    breakfast.innerHTML = breakfastMenu;
+    lunch.innerHTML = lunchMenu;
+    dinner.innerHTML = dinnerMenu;
 }
 
 let dateGridContainerDiy = document.getElementsByClassName('data-grid-container')[0];
@@ -186,3 +235,5 @@ url += `&MLSV_YMD=${MLSV_YMD}`;
 url += `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`;
 
 console.log(url);
+
+
