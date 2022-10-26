@@ -3,6 +3,10 @@
     justify-content: space-around;
 } */
 
+.container {
+    width: 100%;
+}
+
 h1 {
     max-width: 800px;
     text-align: center;

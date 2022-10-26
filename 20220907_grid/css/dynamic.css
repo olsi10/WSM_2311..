@@ -84,7 +84,6 @@ h1 {
 .grid-item:hover {
     font-size: 30px;
     color: rgb(95, 201, 118);
-    border: double 1px #c5c5c5;
     cursor: pointer;
 }
 
@@ -93,6 +92,7 @@ h1 {
     row-gap: 20px;
     /* 메뉴의 내용에 따라서 그리드 높이를 조정한다 */
     grid-template-rows: repeat(3, minmax(min-content, max-content));
+    margin: 20px auto;
 }
 
 .menu-grid-container h1 {
@@ -107,7 +107,8 @@ h1 {
 .dinner {
     font-size: 15px;
     width: 300px;
+    border:  1px solid black;
     border-radius: 8px;
-    background-color: rgb(231, 231, 231);
+    /* background-color: rgb(231, 231, 231); */
     padding: 20px;
 }
