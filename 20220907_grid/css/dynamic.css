@@ -13,7 +13,10 @@
     display: flex;
     column-gap: 40px;
     flex-wrap: wrap;
+    justify-content: center;
 }
+
+
 
 .title-container {
     display: flex;
@@ -92,7 +95,7 @@ h1 {
     row-gap: 20px;
     /* 메뉴의 내용에 따라서 그리드 높이를 조정한다 */
     grid-template-rows: repeat(3, minmax(min-content, max-content));
-    margin: 20px auto;
+    /* margin: 20px auto; */
 }
 
 .menu-grid-container h1 {
