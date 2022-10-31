@@ -170,6 +170,8 @@ const showMenu = (jsonString) => {
     // json -> 조식, 중식, 석식
     try {
         breakfastMenu = json["mealServiceDietInfo"][1]["row"][0]["DDISH_NM"]; // 의 1번째를 가져온다.
+        breakfastMenu = breakfastMenu.replace(/\([0-9\.]+\)/g, ""); //정규표현식 : (문자 숫자나 .문자)문자 / 점 문자가 하나 이상 n개 존재한다. -> +  / g -> global
+
     }
     catch {
         breakfastMenu = "없음";
@@ -178,6 +180,8 @@ const showMenu = (jsonString) => {
 
     try {
         lunchMenu = json["mealServiceDietInfo"][1]["row"][1]["DDISH_NM"]; // 의 2번째를 가져온다.
+        lunchMenu = lunchMenu.replace(/\([0-9\.]*\)/g, ""); 
+
     }
     catch {
         lunchMenu = "없음";
@@ -185,7 +189,9 @@ const showMenu = (jsonString) => {
     }
 
     try {
-        dinnerMenu = json["mealServiceDietInfo"][1]["row"][0]["DDISH_NM"]; // 의 1번째를 가져온다.
+        dinnerMenu = json["mealServiceDietInfo"][1]["row"][2]["DDISH_NM"]; // 의 3번째를 가져온다.
+        dinnerMenu = dinnerMenu.replace(/\([0-9\.]*\)/g, ""); // 0-9 를 d로 바꿔도 된다. d -> digit
+
     }
     catch {
         dinnerMenu = "없음";
@@ -207,7 +213,7 @@ let dateGridContainerDiy = document.getElementsByClassName('data-grid-container'
 let gridItems = dateGridContainerDiy.getElementsByClassName('grid-item');
 
 for(let gridItem of gridItems) {
-    gridItem.onclick = handler;
+    gridItem.onmouseover = handler;
 }
 
 
