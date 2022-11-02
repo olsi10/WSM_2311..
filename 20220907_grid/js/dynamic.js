@@ -9,8 +9,34 @@ let year = now.getFullYear();
 let month = now.getMonth(); // 0 ~ 11
 month++;
 
-const setCalendar = (year, month) => {
+// .data-grid-container > .grid-item (날짜): js mouseover 이벤트 발생하면 handler 지정
+const handler = (event) => {
+    // handler에서 year, month, date 정보 가져와서 url 생성
+    let date = event.target.innerHTML;
+    const KEY = "42a1d43c85f848fdaed1ad5a7b5325ab";
+    const ATPT_OFCDC_SC_CODE = "B10";           // 서울특별시교육청
+    const SD_SCHUL_CODE = "7010569";            // 미림여자정보과학고
+    let MLSV_YMD = `${year}${month.toString().padStart(2, "0")}${date.padStart(2, "0")}`;    // 2022 / 10 / 19
+    // 한자리의 경우 앞자리에 0을 넣어야 함 ex) 3일 -> 03
+    // let MMEAL_SC_CODE = 2;                   // 중식2 석식3 조식1
 
+    let url = `https://open.neis.go.kr/hub/mealServiceDietInfo`;
+
+    url += `?KEY=${KEY}`;
+    url += `&Type=json`;
+    url += `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`;
+    url += `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`;
+    url += `&MLSV_YMD=${MLSV_YMD}`;
+    // url += `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`;
+
+    console.log(url);
+
+    getMenuByAPI(url); //AJAX 호출 (비동기)
+
+}
+
+const setCalendar = (year, month) => {
+    
     // 1일은 무슨 요일?
     let firstDate = new Date(year, month - 1, 1);
     let firstDay = firstDate.getDay();
@@ -55,6 +81,14 @@ const setCalendar = (year, month) => {
     // 1일에 해당하는 div를 grid-column-start: 요일 + 1;
     let firstDateDiv = dataGridContainerDiv.getElementsByClassName('grid-item')[0];
     firstDateDiv.style.gridColumnStart = firstDay + 1; 
+
+    // mouseover event 처리
+
+    let gridItems = dataGridContainerDiv.getElementsByClassName('grid-item');
+    for(let gridItem of gridItems) {
+        gridItem.onmouseover = handler;
+    }
+    
 }
 
 setCalendar(year, month);
@@ -106,32 +140,7 @@ initBtn();
 //  API AJAX 급식 데이터 가져오기
 
 
-// .data-grid-container > .grid-item (날짜): js mouseover 이벤트 발생하면 handler 지정
 // event 파라미터 -> 값 가져오기
-const handler = (event) => {
-    // handler에서 year, month, date 정보 가져와서 url 생성
-    let date = event.target.innerHTML;
-    const KEY = "42a1d43c85f848fdaed1ad5a7b5325ab";
-    const ATPT_OFCDC_SC_CODE = "B10";           // 서울특별시교육청
-    const SD_SCHUL_CODE = "7010569";            // 미림여자정보과학고
-    let MLSV_YMD = `${year}${month.toString().padStart(2, "0")}${date.padStart(2, "0")}`;    // 2022 / 10 / 19
-    // 한자리의 경우 앞자리에 0을 넣어야 함 ex) 3일 -> 03
-    // let MMEAL_SC_CODE = 2;                   // 중식2 석식3 조식1
-
-    let url = `https://open.neis.go.kr/hub/mealServiceDietInfo`;
-
-    url += `?KEY=${KEY}`;
-    url += `&Type=json`;
-    url += `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`;
-    url += `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`;
-    url += `&MLSV_YMD=${MLSV_YMD}`;
-    // url += `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`;
-
-    console.log(url);
-
-    getMenuByAPI(url); //AJAX 호출 (비동기)
-
-}
 // AJAX 사용해서 url 호출 (Asynchronous JavaScript ) = 필요 부분만 갱신되는 기능
 const getMenuByAPI = (url) => {
     // XMLHttpRequest 만들기
@@ -209,15 +218,12 @@ const showMenu = (jsonString) => {
     dinner.innerHTML = dinnerMenu;
 }
 
-let dateGridContainerDiy = document.getElementsByClassName('data-grid-container')[0];
-let gridItems = dateGridContainerDiy.getElementsByClassName('grid-item');
+let dateGridContainerDiv = document.getElementsByClassName('data-grid-container')[0];
+let gridItems = dateGridContainerDiv.getElementsByClassName('grid-item');
 
 for(let gridItem of gridItems) {
     gridItem.onmouseover = handler;
 }
-
-
-
 
 
 
