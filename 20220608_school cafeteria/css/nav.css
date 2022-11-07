@@ -1,0 +1,41 @@
+header {
+    background-color: var(--first-color);
+}
+
+/* nav */
+.nav-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+nav {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+    color: #fff;
+    /* visibility: hidden; /*공간을 차지함*/
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 0.75rem; /*12px; */
+
+}
+
+nav i { /*밥 흰색*/
+    color: #fff;
+    font-size: 1.25rem; /*아이콘 1.25배*/
+}
+
+.nav-item a {
+    color: #fff;
+}
+
+.nav-link {
+    display: block; /* 한 줄 전체를 차지해서 링크 동작*/
+}
