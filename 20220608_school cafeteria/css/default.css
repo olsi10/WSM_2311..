@@ -43,8 +43,13 @@ body {
     font-size: var(--normar-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
-
+    -ms-overflow-style: none;
 }
+
+::-webkit-scrollbar {
+ display: none;
+}
+
 h1,
 h2,
 h3 {
