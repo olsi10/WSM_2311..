@@ -27,7 +27,9 @@ nav {
     grid-template-areas: 
     "header header header"
     "nav main side-a"
-    "footer main side-a";
+    "nav main side-a"
+    "footer footer footer";
+    grid-template-columns: 100px 3fr 1fr;
 }
 
 main {
