@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+    font-family: 'Jua', sans-serif;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -6,18 +12,23 @@ main {
 }
 
 .grid-container {
+    width: 800px;
     display: grid;
     /* 여기서 하는 실수, 시험 출제 */
     grid-template-areas:
     "title-a    .           title-b     legend "
     "seat-a     arrow-up    seat-b      legend";
-    grid-template-columns: 200px 80px 200px ;
+    grid-template-columns: 1fr 80px 1fr auto;
+    grid-template-rows: 100px 350px;
+    margin: 0 20px;
 }
 
 .title {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 800;
+    font-size: 1.2rem;
     /* width: 200px;
     height: 100px; */
 }
@@ -33,21 +44,41 @@ main {
     background-color: gold;
 }
 
+.seat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 80px;
+    box-shadow: 0px 5px 20px 0px rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
 .seat-a {
     grid-area: seat-a;
+    background-image: linear-gradient(yellowgreen, rgb(110, 255, 110));
 }
 
 .seat-b {
     grid-area: seat-b;
+    background-image: linear-gradient(gold, rgb(255, 244, 147));
 }
 
 .arrow-up { 
     grid-area: arrow-up;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 5.2rem;
 }
 
 .legend {
     grid-area: legend;
     padding: 10px;
+    /* 높이를 컨텐트에 맞게 해라 */
+    height: fit-content;
+    margin-left: 30px;
 }
 
 .legend > div > div {
@@ -77,4 +108,23 @@ main {
     width: 20px;
     height: 20px;
     margin-left: 4px
+}
+
+
+/* MOBILE */
+
+/* 미디어 쿼리 시험 */
+
+@media screen and (max-width:600px) {
+    .grid-container {
+        grid-template-columns: 1fr 45px 1fr auto;
+    }
+
+    .seat {
+        font-size: 1.5rem;
+    }
+
+    .arrow-up {
+        font-size: 2rem;
+    }
 }
