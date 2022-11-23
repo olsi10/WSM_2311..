@@ -11,15 +11,26 @@ main {
     grid-template-areas:
     "title-a    .           title-b     legend "
     "seat-a     arrow-up    seat-b      legend";
+    grid-template-columns: 200px 80px 200px ;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 200px;
+    height: 100px; */
 }
 
 .title-a {
     /* grid-area에 들어갈 자리 지정 -> 시험 출제 */
     grid-area: title-a;
+    background-color: yellowgreen;
 }
 
 .title-b {
     grid-area: title-b;
+    background-color: gold;
 }
 
 .seat-a {
@@ -30,6 +41,40 @@ main {
     grid-area: seat-b;
 }
 
+.arrow-up { 
+    grid-area: arrow-up;
+}
+
 .legend {
     grid-area: legend;
+    padding: 10px;
+}
+
+.legend > div > div {
+    display: flex;
+}
+
+.color-1 {
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(82, 255, 82);
+    margin-left: 4px
+}
+
+.color-2 {
+    background-color: rgb(255, 237, 77);
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    margin-left: 4px
+    
+}
+
+.color-3 {
+    background-color: rgb(71, 197, 255);
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    margin-left: 4px
 }
