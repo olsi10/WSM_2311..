@@ -141,7 +141,7 @@ initBtn();
 
 
 // event 파라미터 -> 값 가져오기
-// AJAX 사용해서 url 호출 (Asynchronous JavaScript ) = 필요 부분만 갱신되는 기능
+// AJAX 사용해서 url 호출 (Asynchronous JavaScript and XML ) = 필요 부분만 갱신되는 기능
 const getMenuByAPI = (url) => {
     // XMLHttpRequest 만들기
     let xhr = new XMLHttpRequest();
