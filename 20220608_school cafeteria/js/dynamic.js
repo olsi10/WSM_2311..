@@ -148,8 +148,7 @@ const getMenuByAPI = (url) => {
     
     // callback
     xhr.onreadystatechange = () => { // onclick
-        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-            // console.log(xhr.response); // 데이터 출력
+        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) { //  - 200 : 서버에 문서가 존재함. 400 : 존재 X             // console.log(xhr.response); // 데이터 출력
             showMenu(xhr.response);
         }
         else {
@@ -157,7 +156,7 @@ const getMenuByAPI = (url) => {
         }
     }
                                     
-    // 요청 방식,url 비동기 여부 설정
+    // 요청 방식, url, 비동기 여부 설정
     xhr.open("GET", url, true); 
 
     // 요청 전송
